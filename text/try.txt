@@ -1,0 +1,46 @@
+<?php
+$servername = "localhost";
+$username = "Ynno";
+$password = "100124DensoTen";
+$dbname = "bikedb";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+function query(){
+  $sql = "SELECT * FROM bikedb.bikeregistration";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["col_serialnumber"]. " " . $row["col_model"]. "<br>";
+      }
+    } else {
+      echo "0 results";
+    }
+
+}
+
+function create_user()
+{
+  echo "Clicked";
+  $sql = "INSERT INTO bikedb.bikeregistration (`col_serialnumber`, `col_maker`, `col_model`, `col_color`, `col_photo`, `col_owner_name`, `col_owner_no`, `col_owner_add`, `col_status`)
+          VALUES ('31293','Ferrari','F123','Red','NA','Donald','123987','Laguna','OK') ";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+}
+
+
+?>

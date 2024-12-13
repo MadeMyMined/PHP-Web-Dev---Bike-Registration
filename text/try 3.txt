@@ -1,0 +1,29 @@
+<form action="admin_Ochange_view.php" method="POST" name="r_values">
+    <?php
+    if (isset($_GET['results'])) {
+        $results = json_decode($_GET['results'], true);
+        if (count($results) > 0) {
+            foreach ($results as $row) {
+                echo "<tr>";
+                    echo "<td> <input type='checkbox'></td>";
+                    echo "<td>" . $row['col_userid'] . "</td>";
+                    echo "<td>" . $row['col_name'] . "</td>";
+                    echo "<td>" . $row['col_address'] . "</td>";
+                    echo "<td>" . $row['col_contact'] . "</td>";
+                    echo "<td>" . $row['col_bikeid'] . "</td>";
+                    echo "<td>" . $row['col_serialnumber'] . "</td>";
+                    echo "<td>" . $row['col_maker'] . "</td>";
+                    echo "<td>" . $row['col_model'] . "</td>";
+                    echo "<td>" . $row['col_color'] . "</td>";
+                    echo "<td>" . $row['col_bikestatus'] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='11'>No results found!</td></tr>";
+        }
+    } else {
+        echo "<tr><td colspan='11'>Please enter a search term and click Search.</td></tr>";
+    }
+    ?>
+    <input type="submit" name="b_update_d" value="Update Values(admin)" style="float: right; margin: 5px;">
+</form>

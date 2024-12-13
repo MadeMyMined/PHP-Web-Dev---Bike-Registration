@@ -1,0 +1,20 @@
+hard coded login
+// if(empty($_POST['b_cancel'])){
+    //     if($_POST['i_username'] == "Ynno" && $_POST['i_password'] == "123") {
+        
+    //     } elseif ($_POST['i_username'] == "Admin" && $_POST['i_password'] == "321") {
+    //         $_SESSION['u_username'] = $_POST['i_username'];
+    //         $_SESSION['u_password'] = $_POST['i_password'];
+    //         header('Location: http://localhost:8080/bikeregistration/admin_view.php');
+    
+    //     } elseif ($_POST['i_username'] == "SuperAdmin" && $_POST['i_password'] == "147") {
+    //         $_SESSION['u_username'] = $_POST['i_username'];
+    //         $_SESSION['u_password'] = $_POST['i_password'];
+    //         header('Location: http://localhost:8080/bikeregistration/superadmin_view.php');
+    
+    //     } else {
+    //         $_SESSION['l_note'] = "Invalid Username & Password";
+    //         header('Location: http://localhost:8080/bikeregistration/login.php');
+    //     }
+    // }
+    

@@ -1,0 +1,43 @@
+<?php 
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="margin-left: 350px;">
+                            <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Basic</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="bootstrap.js" crossorigin="anonymous"></script>
+    </body>
+</html>
